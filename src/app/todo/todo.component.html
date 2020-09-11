@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let todo of todos">{{todo.name}}  {{todo.content}} <button (click)="SupprimerToDo(todo)" class="btn btn-danger">Delete!!!</button>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6">
+      Name <input type="text" class="form-control" name="nom" [(ngModel)]="todo.name">
+      Content <input type="text" class="form-control" name="contenu" [(ngModel)]="todo.content">
+      <button class="btn btn-primary" (click)="BtnAddTodo()" >Ajouter!!!</button>
+    </div>
+  </div>
+</div>
